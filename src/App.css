@@ -22,11 +22,12 @@
   top: 65px;
   left: 10.2%;
   z-index: 100;
+  display: flex;
 }
 
 .card-left-side {
   height: 80vh;
-  width: 30%;
+  width: 100%;
   background: #5e8a90;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,6 @@
 }
 .card-left-side h1 span {
   font-family: "Poppins", sans-serif;
-
 }
 .card-left-side img {
   width: 50%;
@@ -51,20 +51,62 @@
 .jokes-btn {
   border: none;
   padding: 0.9rem 2.5rem;
-  width:50%;
-  color:black;
+  width: 50%;
+  color: black;
   font-family: "Poppins", sans-serif;
-    font-weight: bold;
+  font-weight: bold;
   background: linear-gradient(
-    135deg, 
-  rgba(188, 206, 248, 1) 0%,
-  rgba(188, 206, 248, 1) 50%,
-   rgba(250, 247, 240,1)  50%,
-   rgba(250, 247, 240,1)  100%
+    135deg,
+    rgba(188, 206, 248, 1) 0%,
+    rgba(188, 206, 248, 1) 50%,
+    rgba(250, 247, 240, 1) 50%,
+    rgba(250, 247, 240, 1) 100%
   );
   border-radius: 20px;
   cursor: pointer;
-  margin-top:10px;
-   
+  margin-top: 10px;
 }
 
+.card-right-side {
+  width: 70%;
+  height: 80vh;
+}
+
+.fa-solid {
+  font-size: 3rem;
+  padding: 2rem;
+  color: #fff;
+}
+
+.Joke {
+  padding: 1.5rem 1rem 0.5rem;
+  border-bottom:3px solid #fcfcfc;
+}
+
+.Joke .up-arrow,
+.Joke .down-arrow {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.rate-number {
+  display: inline-block;
+  padding: 0.6rem 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 3px solid #62dcdc;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.Joke-text {
+    display:inline-block;
+    color:#fff;
+    font-weight: bold;
+}

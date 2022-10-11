@@ -1,7 +1,7 @@
 import './App.css';
 
 import SideBar from './SideBar';
-
+import JokeList from './JokeList';
 function App() {
 
   return (
@@ -9,6 +9,8 @@ function App() {
       <div className="clip-path">
       <div className="jokes-card">
         < SideBar />
+        < JokeList />
+        
       </div>
       </div>
 
