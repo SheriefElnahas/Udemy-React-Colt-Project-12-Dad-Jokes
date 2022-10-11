@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Joke() {
+export default function Joke(props) {
   return (
     <div className="Joke">
       <div className="Joke-rate">
@@ -16,7 +16,7 @@ export default function Joke() {
         <button className="down-arrow">
         <FontAwesomeIcon icon={faArrowDown} />
         </button>
-        <p className="Joke-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, laudantium.</p>
+        <p className="Joke-text">{props.jokeText}</p>
 
       </div>
     </div>
