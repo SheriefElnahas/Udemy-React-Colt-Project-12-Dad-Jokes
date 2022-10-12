@@ -75,13 +75,13 @@ export default function Joke(props) {
         </button>
         <p className="rate-number" style={{border: `3px solid ${changeMode(props.jokeRate).color}`}}>{props.jokeRate}</p>
 
-        {/* <p className="rate-number" >{props.jokeRate}</p> */}
 
         <button onClick={() => props.decreaseRate(props.index)} className="down-arrow">
           <FontAwesomeIcon icon={faArrowDown} />
         </button>
-        <p className="Joke-text">{props.jokeText}</p>
         </div>
+        <p className="Joke-text">{props.jokeText}</p>
+
 
 
         <img className="Joke-img" src={changeMode(props.jokeRate).imgSrc} alt="" />
