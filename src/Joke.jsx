@@ -5,19 +5,19 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Joke(props) {
+
   return (
     <div className="Joke">
       <div className="Joke-rate">
-        <button className="up-arrow">
-        <FontAwesomeIcon icon={faArrowUp} />
+        <button onClick={() => props.increaseRate(props.index)} className="up-arrow">
+          <FontAwesomeIcon icon={faArrowUp} />
         </button>
-        <p className="rate-number">10</p>
-    
-        <button className="down-arrow">
-        <FontAwesomeIcon icon={faArrowDown} />
+        <p className="rate-number">{props.jokeRate}</p>
+
+        <button onClick={() => props.decreaseRate(props.index)} className="down-arrow">
+          <FontAwesomeIcon icon={faArrowDown} />
         </button>
         <p className="Joke-text">{props.jokeText}</p>
-
       </div>
     </div>
   );

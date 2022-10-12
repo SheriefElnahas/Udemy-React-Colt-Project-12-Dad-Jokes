@@ -15,40 +15,47 @@
 }
 
 .jokes-card {
-  height: 80vh;
+  height: 79vh;
   width: 80%;
   background: #357b9b;
   position: absolute;
   top: 65px;
   left: 10.2%;
   z-index: 100;
-  display: flex;
-}
+  display:grid;
+  grid-template-columns: 1fr 3fr;
 
-.card-left-side {
-  height: 80vh;
-  width: 100%;
+}
+/* SideBar Component */
+
+.SideBar {
+  height: 79vh;
   background: #5e8a90;
+
+}
+.SideBar-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height:100%;
 }
-.card-left-side h1 {
+.SideBar h1 {
   font-weight: bold;
   font-size: 3rem;
   font-family: "Tillana", cursive;
   color: #fff;
 }
-.card-left-side h1 span {
+.SideBar h1 span {
   font-family: "Poppins", sans-serif;
 }
-.card-left-side img {
+.SideBar img {
   width: 50%;
   display: block;
 }
 
-.jokes-btn {
+
+.SideBar-btn {
   border: none;
   padding: 0.9rem 2.5rem;
   width: 50%;
@@ -67,25 +74,27 @@
   margin-top: 10px;
 }
 
-.card-right-side {
-  width: 70%;
-  height: 80vh;
+/* JokeList Component */
+.JokeList {
+ 
+  height:80vh;
+
 }
 
-.fa-solid {
+/* Joke Component */
+.Joke {
+  padding: 1.2rem 0.3rem 0rem;
+  border-bottom:3px solid #fcfcfc;
+}
+.Joke .fa-solid {
   font-size: 3rem;
   padding: 2rem;
   color: #fff;
 }
 
-.Joke {
-  padding: 1.5rem 1rem 0.5rem;
-  border-bottom:3px solid #fcfcfc;
-}
-
 .Joke .up-arrow,
 .Joke .down-arrow {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
   background: none;
@@ -94,9 +103,9 @@
   color: #fff;
 }
 
-.rate-number {
+.Joke .rate-number {
   display: inline-block;
-  padding: 0.6rem 0.8rem;
+  padding: 0.2rem 0.4rem;
   font-weight: bold;
   border-radius: 50%;
   border: 3px solid #62dcdc;
@@ -109,4 +118,5 @@
     display:inline-block;
     color:#fff;
     font-weight: bold;
+    font-size:1rem;
 }
