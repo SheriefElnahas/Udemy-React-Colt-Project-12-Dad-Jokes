@@ -32,24 +32,38 @@ export default class JokeList extends Component {
     this.setState((prevState) => {
       return [(prevState.jokes[jokeIndex].jokeRate += 0.5)];
     });
+    this.sortJokes();
   };
   decreaseRate = (jokeIndex) => {
     this.setState((prevState) => {
       return [(prevState.jokes[jokeIndex].jokeRate -= 0.5)];
     });
+    this.sortJokes();
   };
 
+  sortJokes() {
+    this.setState((prevState) => {
+      return prevState.jokes.sort((a,b) => {
+        if (a.jokeRate < b.jokeRate) return 1;
+        if(a.jokeRate > b.jokeRate ) return -1;  
+  
+      })
+    })
+  }
+
   render() {
+    // const sortedJokes = this.state.jokes.sort((a,b) => {
+    //   if (a.jokeRate < b.jokeRate) return 1;
+    //   if(a.jokeRate > b.jokeRate ) return -1;  
+
+    // })
+
+
     const jokesElement = this.state.jokes.map((joke, index) => {
+
       return (
-        <Joke
-          jokeText={joke.jokeText}
-          key={index}
-          jokeRate={joke.jokeRate}
-          decreaseRate={this.decreaseRate}
-          increaseRate={this.increaseRate}
-          index={index}
-        />
+        <Joke  jokeText={joke.jokeText}   key={index}  jokeRate={joke.jokeRate}
+          decreaseRate={this.decreaseRate}    increaseRate={this.increaseRate}   index={index}      />
       );
     });
 
