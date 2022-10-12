@@ -29,13 +29,18 @@ export default class JokeList extends Component {
   }
 
   increaseRate = (jokeIndex) => {
+
     this.setState((prevState) => {
-      return [(prevState.jokes[jokeIndex].jokeRate += 0.5)];
+      if(prevState.jokes[jokeIndex].jokeRate < 14) {
+        return [(prevState.jokes[jokeIndex].jokeRate += 0.5)];
+      } 
     });
     this.sortJokes();
+
   };
   decreaseRate = (jokeIndex) => {
     this.setState((prevState) => {
+      if(prevState.jokes[jokeIndex].jokeRate > -14)
       return [(prevState.jokes[jokeIndex].jokeRate -= 0.5)];
     });
     this.sortJokes();
