@@ -62,10 +62,6 @@ export default function Joke(props) {
       
   }
 
-
-
-
-
   return (
     <div className="Joke">
       <div className="Joke-rate">
